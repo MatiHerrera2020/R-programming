@@ -23,14 +23,3 @@ complete<-function(directory="specdata",id=vector("numeric",1:332)) {
 complete("specdata",25:30)
 complete("specdata",25:132)
 complete("specdata",23)
-
-cc <- complete("specdata", c(6, 10, 20, 34, 100, 200, 310))
-print(cc$nobs)
-
-cc <- complete("specdata", 54)
-print(cc$nobs)
-
-set.seed(42)
-cc <- complete("specdata", 332:1)
-use <- sample(332, 10)
-print(cc[use, "nobs"])
